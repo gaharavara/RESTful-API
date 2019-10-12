@@ -30,4 +30,18 @@ router.get('/:productId', (req, res, next) => {
     }
 });
 
+// For patch request
+router.patch('/',(req, res, next) => {
+    res.status(200).json({
+        message: "A patch response of products page | Updated product"
+    })
+});
+
+// For delete request
+router.delete('/',(req, res, next) => {
+    res.status(200).json({
+        message: "A delete response of products page | Deleted product"
+    })
+});
+
 module.exports = router;
