@@ -21,4 +21,24 @@ app.use(morgan('dev')); // Middleware for showing the logs by default using the 
 
 app.use('/products',productRoute); // Every request to /products is handled by productRoute (api/products.js file)
 app.use('/order', orderRoute);
+
+// Error handling for urls that are not defined by us in app.use() for handling
+app.use((req, res, next) => {
+    const error = new Error('Not Found'); // Creating an Error object that is by default present in node
+    error.status = 404;
+    next(error);
+});
+
+// In case the error is not caused by  the url instead it is a database or similiar kind of error we use the below method
+// for handling
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });
+});
+
+
 module.exports = app;
