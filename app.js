@@ -3,6 +3,8 @@ const express = require("express"); // Express Application e.g. Express makes ha
 const app = express(); // Spins up express as a function which makes all the utilities of an express app available to us
 
 //use sets up a middleware
+
+/*
 app.use((req, res, next) => {
 
     res.status(200).json({
@@ -10,5 +12,10 @@ app.use((req, res, next) => {
     });
 
 });
+*/
+
+const productRoute = require('./api/products'); // Import the products route
+
+app.use('/products',productRoute); // every request to /products is handled by productRoute (api/products.js file)
 
 module.exports = app;
