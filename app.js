@@ -15,7 +15,8 @@ app.use((req, res, next) => {
 */
 
 const productRoute = require('./api/products'); // Import the products route
+const orderRoute = require('./api/order'); //Import the order route
 
 app.use('/products',productRoute); // every request to /products is handled by productRoute (api/products.js file)
-
+app.use('/order', orderRoute);
 module.exports = app;
