@@ -1,0 +1,28 @@
+{
+  "name": "restful-api",
+  "version": "1.0.0",
+  "description": "A demo restful api using node.js for a simple shop API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaharavara/RESTful-API.git"
+  },
+  "keywords": [
+    "restful",
+    "api",
+    "node.js",
+    "javascript"
+  ],
+  "author": "Abhishek Kumar Singh | gaharavara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaharavara/RESTful-API/issues"
+  },
+  "homepage": "https://github.com/gaharavara/RESTful-API#readme",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
